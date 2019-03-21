@@ -9,13 +9,14 @@ def get_primes(nr_primes):
             primes.append(n)
     return primes
 
-primes = get_primes(10000)
-target = 600851475143
-i = 0
-while target >= primes[i]:
-    if target%primes[i] == 0:
-        print(primes[i],target)
-        target = target/primes[i]
-    i += 1
-
+def main():
+    primes = get_primes(10000)
+    target = 600851475143
+    i = 0
+    while target >= primes[i]:
+        if target%primes[i] == 0:
+            print(primes[i],target)
+            target = target/primes[i]
+        i += 1
+# main()
 ### This code is fugly
